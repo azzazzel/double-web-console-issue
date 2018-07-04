@@ -1,0 +1,52 @@
+-standalone: \
+	${fileuri;index/index.xml.gz};name=index
+
+-runee: JavaSE-1.8
+-runfw: org.apache.felix.framework;version='[5,6)'
+-resolve.effective: resolve, active, assemble
+
+-runrequires: \
+	em.contract;filter:='(em.contract=WebAdminUI)';effective:=assemble
+	
+-runbundles: \
+	em.contractors.pax-logging;version='[1.10.1,1.10.2)',\
+	em.contractors.pax-web-jetty;version='[6.0.7,6.0.8)',\
+	em.contractors.webconsole;version='[4.3.4,4.3.5)',\
+	json;version='[20070829.0.0,20070829.0.1)',\
+	org.apache.commons.fileupload;version='[1.2.1,1.2.2)',\
+	org.apache.commons.io;version='[1.4.0,1.4.1)',\
+	org.apache.commons.logging;version='[1.2.0,1.2.1)',\
+	org.apache.felix.inventory;version='[1.0.4,1.0.5)',\
+	org.apache.felix.log;version='[1.0.1,1.0.2)',\
+	org.apache.felix.metatype;version='[1.1.4,1.1.5)',\
+	org.apache.felix.scr;version='[2.0.2,2.0.3)',\
+	org.apache.felix.webconsole;version='[4.2.0,4.2.1)',\
+	org.apache.felix.webconsole;version='[4.3.4,4.3.5)',\
+	org.apache.felix.webconsole.plugins.ds;version='[2.0.6,2.0.7)',\
+	org.apache.felix.webconsole.plugins.event;version='[1.1.6,1.1.7)',\
+	org.apache.felix.webconsole.plugins.memoryusage;version='[1.0.6,1.0.7)',\
+	org.apache.felix.webconsole.plugins.obr;version='[1.0.4,1.0.5)',\
+	org.apache.felix.webconsole.plugins.packageadmin;version='[1.0.4,1.0.5)',\
+	org.apache.felix.webconsole.plugins.scriptconsole;version='[1.0.2,1.0.3)',\
+	org.apache.xbean.bundleutils;version='[4.1.0,4.1.1)',\
+	org.apache.xbean.finder;version='[4.1.0,4.1.1)',\
+	org.eclipse.jetty.http;version='[9.3.14,9.3.15)',\
+	org.eclipse.jetty.io;version='[9.3.14,9.3.15)',\
+	org.eclipse.jetty.security;version='[9.3.14,9.3.15)',\
+	org.eclipse.jetty.server;version='[9.3.14,9.3.15)',\
+	org.eclipse.jetty.servlet;version='[9.3.14,9.3.15)',\
+	org.eclipse.jetty.util;version='[9.3.14,9.3.15)',\
+	org.eclipse.jetty.xml;version='[9.3.14,9.3.15)',\
+	org.everit.osgi.bundles.javax.servlet-api;version='[3.1.0,3.1.1)',\
+	org.objectweb.asm;version='[5.0.3,5.0.4)',\
+	org.objectweb.asm.commons;version='[5.0.3,5.0.4)',\
+	org.objectweb.asm.tree;version='[5.0.3,5.0.4)',\
+	org.ops4j.pax.logging.pax-logging-api;version='[1.10.1,1.10.2)',\
+	org.ops4j.pax.logging.pax-logging-log4j2;version='[1.10.1,1.10.2)',\
+	org.ops4j.pax.web.pax-web-api;version='[6.0.7,6.0.8)',\
+	org.ops4j.pax.web.pax-web-extender-whiteboard;version='[6.0.7,6.0.8)',\
+	org.ops4j.pax.web.pax-web-jetty;version='[6.0.7,6.0.8)',\
+	org.ops4j.pax.web.pax-web-runtime;version='[6.0.7,6.0.8)',\
+	org.ops4j.pax.web.pax-web-spi;version='[6.0.7,6.0.8)',\
+	org.osgi.service.cm;version='[1.6.0,1.6.1)',\
+	org.osgi.service.event;version='[1.3.1,1.3.2)'

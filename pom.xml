@@ -1,0 +1,54 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.commsen.em.troubleshoot</groupId>
+	<artifactId>double-web-console</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>pom</packaging>
+
+	<build>
+		<plugins>
+<!-- 			<plugin>
+				<groupId>biz.aQute.bnd</groupId>
+				<artifactId>bnd-indexer-maven-plugin</artifactId>
+				<version>3.5.0</version>
+				<configuration>
+					<inputDir>${project.basedir}/lib</inputDir>
+					<outputFile>${project.basedir}/index/index.xml</outputFile>
+				</configuration>
+				<executions>
+					<execution>
+						<id>index</id>
+						<goals>
+							<goal>local-index</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+ -->			<plugin>
+				<groupId>biz.aQute.bnd</groupId>
+				<artifactId>bnd-resolver-maven-plugin</artifactId>
+<!-- 				<version>3.5.0</version> -->
+				<version>4.0.0</version>
+				<configuration>
+					<failOnChanges>false</failOnChanges>
+					<bndruns>
+						<bndrun>test1.bndrun</bndrun>
+						<bndrun>test2.bndrun</bndrun>
+						<bndrun>test3.bndrun</bndrun>
+					</bndruns>
+				</configuration>
+				<executions>
+					<execution>
+						<goals>
+							<goal>resolve</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+
+	</build>
+
+</project>
