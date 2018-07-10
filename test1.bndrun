@@ -7,7 +7,12 @@
 
 -runrequires: \
 	em.contract;filter:='(em.contract=WebAdminUI)';effective:=assemble
-	
+
+-runblacklist: \
+	osgi.identity;filter:="(osgi.identity=osgi.core)",\
+	osgi.identity;filter:="(osgi.identity=osgi.cmpn)",\
+	osgi.identity;filter:="(osgi.identity=osgi.enterprise)"
+		
 -runbundles: \
 	em.contractors.pax-logging;version='[1.10.1,1.10.2)',\
 	em.contractors.pax-web-jetty;version='[6.0.7,6.0.8)',\
